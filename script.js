@@ -1,14 +1,13 @@
 function startGame() {
     const phoneNumber = document.getElementById('phoneNumber').value;
-    document.getElementById("prizePoolDetails").style.display = "none";
+    const currentPageType = window.location.pathname.includes('flipcardCL') ? 'contactLens' :
 
-    // Check if the user with this phone number has played before
-    if (getCookie(phoneNumber)) {
-        alert('You have already played!');
-        
+    // Check if the user with this phone number has played before on the current subpage
+    if (getCookie(phoneNumber + '_' + currentPageType)) {
+        alert('You have already played Contact Lens challenge!');
     } else {
-        // Set a cookie for this user
-        setCookie(phoneNumber, 'played', 30); // The number '30' signifies the cookie will expire in 30 days
+        // Set a cookie for this user for the current subpage
+        setCookie(phoneNumber + '_' + currentPageType, 'played', 30);
 
         // Make the cards visible
         const cards = document.querySelectorAll('.card-container');
