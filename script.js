@@ -42,7 +42,7 @@ function revealDiscount(cardId) {
     currentDate.setDate(currentDate.getDate() + 14);
     const expiryDateText = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
 
-    card.querySelector('.card-back-content').innerHTML = `<div class="discountMessage">${discount}</div><div class="discountMessage1">*capped discount at $275*</div><div><br></div><div>Discount Code: ${code}</div><div>Phone number: ${phoneNumber.value}</div><div>Expiry Date: ${expiryDateText}</div><br><div>Screenshot this to redeem the voucher! :)</div>`;
+    card.querySelector('.card-back-content').innerHTML = `<div class="discountMessage">${discount}</div><div class="discountMessage1">*Apply for Contact Lens Only*</div><div><br></div><div>Discount Code: ${code}</div><div>Phone number: ${phoneNumber.value}</div><div>Expiry Date: ${expiryDateText}</div><br><div>Screenshot this to redeem the voucher! :)</div>`;
     
     
     // Disable further interactions for all cards
