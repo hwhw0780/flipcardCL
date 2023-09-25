@@ -1,14 +1,16 @@
 function startGame() {
     const phoneNumber = document.getElementById('phoneNumber').value;
-    document.getElementById("prizePoolDetails").style.display = "none";
-    const currentPageType = window.location.pathname.includes('flipcardCL') ? 'contactLens' :
+    
+    // Retrieve the play count from the cookie
+    let playCount = parseInt(getCookie(phoneNumber)) || 0;
 
-    // Check if the user with this phone number has played before on the current subpage
-    if (getCookie(phoneNumber + '_' + currentPageType)) {
-        alert('You have already played Contact Lens challenge!');
+    // Check if the user with this phone number has played twice
+    if (playCount >= 2) {
+        alert('You have already played twice!');
     } else {
-        // Set a cookie for this user for the current subpage
-        setCookie(phoneNumber + '_' + currentPageType, 'played', 30);
+        // Increment the play count and set the updated value in the cookie
+        playCount++;
+        setCookie(phoneNumber, playCount.toString(), 30);
 
         // Make the cards visible
         const cards = document.querySelectorAll('.card-container');
