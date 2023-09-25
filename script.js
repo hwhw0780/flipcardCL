@@ -87,15 +87,6 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
-document.getElementById('optical-frames-button').addEventListener('click', function() {
-    // Perform action for Optical Frames
-});
-
-document.getElementById('contact-lens-button').addEventListener('click', function() {
-    // Perform action for Contact Lens
-});
-
-
 function gameEnd() {
     // Disable the input and button
     document.getElementById('phoneNumber').setAttribute('disabled', true);
