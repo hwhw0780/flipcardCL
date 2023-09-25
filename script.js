@@ -1,5 +1,6 @@
 function startGame() {
     const phoneNumber = document.getElementById('phoneNumber').value;
+    document.getElementById("prizePoolDetails").style.display = "none";
     const currentPageType = window.location.pathname.includes('flipcardCL') ? 'contactLens' :
 
     // Check if the user with this phone number has played before on the current subpage
