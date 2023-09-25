@@ -112,3 +112,8 @@ body {
     padding: 10px;
     cursor: pointer;
 }
+
+#optical-frames-button,
+#contact-lens-button {
+    background-color: yellow;
+}
