@@ -55,11 +55,11 @@ function getRandomDiscount() {
     let discounts = [];
 
     if (randomNum < 0.60) { // 60% chance
-        discounts.push("20% Off (Min Spend $200)");
+        discounts.push("SGD10 (Min Spend $200)");
     } else if (randomNum < 0.95) { // 35% chance
-        discounts.push("30% Off (Min Spend $300)");
+        discounts.push("SGD20 (Min Spend $200)");
     } else { // 5% chance
-        discounts.push("50% Off (Min Spend $400)");
+        discounts.push("SGD40 (Min Spend $200)");
     }
     const randomIndex = Math.floor(Math.random() * discounts.length);
     return discounts[randomIndex];
