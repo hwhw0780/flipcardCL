@@ -68,7 +68,7 @@ function getRandomDiscount() {
 // Function to generate a random discount code
 function getRandomCode() {
     const randomNum = Math.floor(Math.random() * 100000);
-    return `EYEC${String(randomNum).padStart(5, '0')}`;  // Pads with zeros to ensure 5 digits
+    return `CLEYE${String(randomNum).padStart(5, '0')}`;  // Pads with zeros to ensure 5 digits
 }
 
 function getCookie(name) {
